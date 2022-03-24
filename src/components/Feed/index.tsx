@@ -2,7 +2,7 @@ import { Avatar, Divider, Flex, Heading, Tag } from "@chakra-ui/react"
 import { FeedProps } from "../../interfaces/propsTypes"
 import { Post } from "../Post"
 
-export const Feed = ({ isExplore, isLibrary, isYourPosts }: FeedProps) => {
+export const Feed = ({ isExplore, isLibrary, isYourPosts, isSearch }: FeedProps) => {
     return isExplore ? (
         <Flex
             flexDirection="column"
@@ -56,6 +56,24 @@ export const Feed = ({ isExplore, isLibrary, isYourPosts }: FeedProps) => {
             <Heading as="h4" size="md">
                 Your shitty posts
             </Heading>
+            <Post />
+            <Post />
+            <Post />
+            <Post />
+        </Flex>
+    ) : isSearch ? (
+        <Flex
+            flexDirection="column"
+            gap="1rem"
+            width="100%"
+            position="sticky"
+            top="5.4rem"
+            height="max-content"
+        >
+            <Heading as="h4" size="md">
+                Search results
+            </Heading>
+            
             <Post />
             <Post />
             <Post />

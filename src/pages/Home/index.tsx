@@ -26,7 +26,9 @@ export const Home = () => {
                 <Feed
                     isExplore={false}
                     isLibrary={false}
-                    isYourPosts={false} />
+                    isYourPosts={false}
+                    isSearch={false}
+                />
                 <LeftSidebar />
             </Grid>
         </>

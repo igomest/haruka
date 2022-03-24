@@ -4,6 +4,7 @@ import { Login } from "./pages/Login"
 import { Explore } from "./pages/Explore"
 import { Library } from "./pages/Library"
 import { YourPosts } from "./pages/YourPosts"
+import { Search } from "./pages/Search"
 
 const App = () => {
   return (
@@ -14,6 +15,7 @@ const App = () => {
         <Route path="/explore" element={<Explore />} />
         <Route path="/library" element={<Library />} />
         <Route path="/your_posts" element={<YourPosts />} />
+        <Route path="/search" element={<Search />} />
       </Routes>
     </Router>
   )

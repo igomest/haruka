@@ -1,3 +1,6 @@
+import React, { useState } from "react"
+import { useNavigate } from "react-router-dom"
+
 import {
     Avatar,
     Button,
@@ -17,6 +20,9 @@ import { IoMdCreate } from "react-icons/io"
 
 export const Navbar = () => {
     const { colorMode, toggleColorMode } = useColorMode()
+    const navigate = useNavigate()
+
+    const [search, setSearch] = useState('')
 
     return (
         <Flex
@@ -38,16 +44,32 @@ export const Navbar = () => {
                 </Heading>
             </Flex>
 
-            <Tooltip label="Search shit" openDelay={400}>
-                <InputGroup mx={8} width="50vw">
-                    <InputLeftElement
-                        pointerEvents="none"
-                        children={<ImSearch color="gray.300" />}
-                    />
+            <form
+                onSubmit={(e: React.FormEvent) => {
+                    e.preventDefault()
+                    setSearch('')
+                    navigate("/search" + search)
+                }}
+            >
 
-                    <Input type="text" placeholder="Search shit..." variant="filled" />
-                </InputGroup>
-            </Tooltip>
+                <Tooltip label="Search shit" openDelay={400}>
+                    <InputGroup mx={8} width="50vw">
+                        <InputLeftElement
+                            pointerEvents="none"
+                            children={<ImSearch color="gray.300" />}
+                        />
+                        <Input
+                            type="text"
+                            placeholder="Search shit ..."
+                            variant="filled"
+                            onChange={(e: React.ChangeEvent<HTMLInputElement>) => {
+                                setSearch(e.target.value);
+                            }}
+                            value={search}
+                        />
+                    </InputGroup>
+                </Tooltip>
+            </form>
 
             {colorMode === "light" ? (
                 <Tooltip label="Dark mode" openDelay={400}>

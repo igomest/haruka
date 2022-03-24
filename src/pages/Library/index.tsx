@@ -27,6 +27,7 @@ export const Library = () => {
                     isExplore={false}
                     isLibrary={true}
                     isYourPosts={false}
+                    isSearch={false}
                 />
                 <LeftSidebar />
             </Grid>
