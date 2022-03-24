@@ -1,5 +1,3 @@
-import { useEffect } from "react"
-
 import {
     Avatar,
     Button,
@@ -11,17 +9,13 @@ import {
     Tooltip,
     useColorMode,
     IconButton,
+    AvatarBadge,
 } from "@chakra-ui/react"
 import { ImSearch } from "react-icons/im"
 import { FaSun, FaMoon, FaUser } from "react-icons/fa"
-import { AiOutlineFire } from "react-icons/ai"
+import { IoMdCreate } from "react-icons/io"
 
-
-export const LoginNavbar = () => {
-    useEffect(() => {
-        document.title = "OnlyUwU - Login"
-    }, []);
-
+export const Navbar = () => {
     const { colorMode, toggleColorMode } = useColorMode()
 
     return (
@@ -40,7 +34,7 @@ export const LoginNavbar = () => {
                     size="xl"
                     fontFamily="Sansita Swashed"
                 >
-                    OnlyUwU
+                    Haruka
                 </Heading>
             </Flex>
 
@@ -50,7 +44,8 @@ export const LoginNavbar = () => {
                         pointerEvents="none"
                         children={<ImSearch color="gray.300" />}
                     />
-                    <Input type="text" placeholder="Search shit ..." variant="filled" />
+
+                    <Input type="text" placeholder="Search shit..." variant="filled" />
                 </InputGroup>
             </Tooltip>
 
@@ -60,7 +55,7 @@ export const LoginNavbar = () => {
                         icon={<FaMoon />}
                         aria-label="Dark mode"
                         onClick={() => {
-                            toggleColorMode();
+                            toggleColorMode()
                         }}
                     />
                 </Tooltip>
@@ -68,24 +63,28 @@ export const LoginNavbar = () => {
                 <Tooltip label="Light mode" openDelay={400}>
                     <IconButton
                         icon={<FaSun />}
-                        aria-label="Light mode"
+                        aria-label="Ligh mode"
                         onClick={() => {
-                            toggleColorMode();
+                            toggleColorMode()
                         }}
                     />
                 </Tooltip>
             )}
 
-            <Tooltip label="Lets gooo bitch" openDelay={400}>
+            <Tooltip label="Create shit" openDelay={400}>
                 <Button
-                    leftIcon={<AiOutlineFire />}
+                    leftIcon={<IoMdCreate />}
                     colorScheme="purple"
                     variant="solid"
                     borderRadius={24}
                     padding={6}
                 >
-                    Get started
+                    Create
                 </Button>
+            </Tooltip>
+
+            <Tooltip label="Idiot" openDelay={400}>
+                <Avatar cursor="pointer" />
             </Tooltip>
         </Flex>
     )
