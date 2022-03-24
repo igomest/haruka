@@ -23,7 +23,7 @@ export const Home = () => {
                 marginRight="1rem"
             >
                 <RightSidebar />
-                <Feed isExplore={false} isLibrary={false}/>
+                <Feed isExplore={false} isLibrary={false} />
                 <LeftSidebar />
             </Grid>
         </>

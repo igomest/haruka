@@ -1,10 +1,10 @@
 import { useEffect } from "react"
 
 import { Grid } from "@chakra-ui/react"
-import { Navbar } from "../Navbar"
-import { RightSidebar } from "../RightSidebar"
-import { Feed } from "../Feed"
-import { LeftSidebar } from "../LeftSidebar"
+import { Navbar } from "../../components/Navbar"
+import { RightSidebar } from "../../components/RightSidebar"
+import { Feed } from "../../components/Feed"
+import { LeftSidebar } from "../../components/LeftSidebar"
 
 
 
