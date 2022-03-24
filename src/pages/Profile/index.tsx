@@ -3,15 +3,15 @@ import { useEffect } from "react"
 import { Grid } from "@chakra-ui/react"
 import { Navbar } from "../../components/Navbar"
 import { RightSidebar } from "../../components/RightSidebar"
-import { LeftSidebar } from "../../components/LeftSidebar"
 import { Feed } from "../../components/Feed"
+import { ProfileSidebar } from "../../components/ProfileSidebar"
 
 
-export const Home = () => {
-
+export const Profile = () => {
     useEffect(() => {
-        document.title = "Haruka"
+        document.title = "Haruka - Idiot"
     }, [])
+
 
     return (
         <>
@@ -28,9 +28,9 @@ export const Home = () => {
                     isLibrary={false}
                     isYourPosts={false}
                     isSearch={false}
-                    isProfile={false}
+                    isProfile={true}
                 />
-                <LeftSidebar />
+                <ProfileSidebar />
             </Grid>
         </>
     )

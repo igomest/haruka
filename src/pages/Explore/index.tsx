@@ -29,6 +29,7 @@ export const Explore = () => {
                     isLibrary={false}
                     isYourPosts={false}
                     isSearch={false}
+                    isProfile={false}
                 />
 
                 <LeftSidebar />

@@ -3,4 +3,5 @@ export interface FeedProps {
     isLibrary: boolean
     isYourPosts: boolean
     isSearch: boolean
+    isProfile: boolean
 }

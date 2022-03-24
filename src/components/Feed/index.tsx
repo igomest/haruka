@@ -2,7 +2,7 @@ import { Avatar, Divider, Flex, Heading, Tag } from "@chakra-ui/react"
 import { FeedProps } from "../../interfaces/propsTypes"
 import { Post } from "../Post"
 
-export const Feed = ({ isExplore, isLibrary, isYourPosts, isSearch }: FeedProps) => {
+export const Feed = ({ isExplore, isLibrary, isYourPosts, isSearch, isProfile }: FeedProps) => {
     return isExplore ? (
         <Flex
             flexDirection="column"
@@ -20,6 +20,7 @@ export const Feed = ({ isExplore, isLibrary, isYourPosts, isSearch }: FeedProps)
             <Post />
             <Post />
         </Flex>
+        
     ) : isLibrary ? (
         <Flex
             flexDirection="column"
@@ -44,6 +45,7 @@ export const Feed = ({ isExplore, isLibrary, isYourPosts, isSearch }: FeedProps)
             <Post />
             <Post />
         </Flex>
+
     ) : isYourPosts ? (
         <Flex
             flexDirection="column"
@@ -61,6 +63,7 @@ export const Feed = ({ isExplore, isLibrary, isYourPosts, isSearch }: FeedProps)
             <Post />
             <Post />
         </Flex>
+
     ) : isSearch ? (
         <Flex
             flexDirection="column"
@@ -73,12 +76,31 @@ export const Feed = ({ isExplore, isLibrary, isYourPosts, isSearch }: FeedProps)
             <Heading as="h4" size="md">
                 Search results
             </Heading>
-            
+
             <Post />
             <Post />
             <Post />
             <Post />
         </Flex>
+
+    ) : isProfile ? (
+        <Flex
+            flexDirection="column"
+            gap="1rem"
+            width="100%"
+            position="sticky"
+            top="5.4rem"
+            height="max-content"
+        >
+            <Heading as="h4" size="md">
+                Idiot shitty posts
+            </Heading>
+            <Post />
+            <Post />
+            <Post />
+            <Post />
+        </Flex>
+
     ) : (
         <Flex
             flexDirection="column"

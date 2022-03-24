@@ -28,6 +28,7 @@ export const Library = () => {
                     isLibrary={true}
                     isYourPosts={false}
                     isSearch={false}
+                    isProfile={false}
                 />
                 <LeftSidebar />
             </Grid>
