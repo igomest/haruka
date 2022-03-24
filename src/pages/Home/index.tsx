@@ -2,6 +2,7 @@ import { useEffect } from "react"
 
 import { Grid } from "@chakra-ui/react"
 import { Navbar } from "../../components/Navbar"
+import { RightSidebar } from "../../components/RightSidebar"
 
 
 export const Home = () => {
@@ -14,12 +15,12 @@ export const Home = () => {
         <>
             <Navbar />
             <Grid
-                gridTemplateColumns="20vw auto 24vw"
+                gridTemplateColumns="22vw auto 24vw"
                 columnGap="2rem"
                 marginLeft="1rem"
                 marginRight="1rem"
             >
-                <p>Loll</p>
+                <RightSidebar />
                 <p>Lma</p>
                 <p>Lmaooo</p>
             </Grid>
