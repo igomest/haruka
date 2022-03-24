@@ -3,6 +3,8 @@ import { useEffect } from "react"
 import { Grid } from "@chakra-ui/react"
 import { Navbar } from "../../components/Navbar"
 import { RightSidebar } from "../../components/RightSidebar"
+import { LeftSidebar } from "../../components/LeftSidebar"
+import { Feed } from "../../components/Feed"
 
 
 export const Home = () => {
@@ -21,8 +23,8 @@ export const Home = () => {
                 marginRight="1rem"
             >
                 <RightSidebar />
-                <p>Lma</p>
-                <p>Lmaooo</p>
+                <Feed />
+                <LeftSidebar />
             </Grid>
         </>
     )
