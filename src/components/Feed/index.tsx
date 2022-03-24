@@ -1,8 +1,26 @@
 import { Avatar, Flex, Heading, Tag } from "@chakra-ui/react"
+import { FeedProps } from "../../interfaces/propsTypes"
 import { Post } from "../Post"
 
-export const Feed = () => {
-    return (
+export const Feed = ({ isExplore }: FeedProps) => {
+    return isExplore ? (
+        <Flex
+            flexDirection="column"
+            gap="1rem"
+            width="100%"
+            position="sticky"
+            top="5.4rem"
+            height="max-content"
+        >
+            <Heading as="h4" size="md">
+                Trending posts
+            </Heading>
+            <Post />
+            <Post />
+            <Post />
+            <Post />
+        </Flex>
+    ) : (
         <Flex
             flexDirection="column"
             gap="1rem"
@@ -36,4 +54,5 @@ export const Feed = () => {
             <Post />
         </Flex>
     )
+
 }
