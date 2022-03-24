@@ -1,7 +1,17 @@
-import { Avatar, Button, Divider, Flex, Heading } from "@chakra-ui/react"
+import {
+    Avatar,
+    Button,
+    Divider,
+    Flex,
+    Heading,
+    useColorMode
+} from "@chakra-ui/react"
 
 
 export const LeftSidebar = () => {
+    const { colorMode } = useColorMode()
+
+
     return (
         <Flex
             position="sticky"
@@ -83,7 +93,14 @@ export const LeftSidebar = () => {
                 </Flex>
 
                 <Flex width="100%" flexDirection="column" gap="1rem" marginTop="1rem">
-                    <Flex gap="0.4rem">
+                    <Flex
+                        gap="0.4rem"
+                        _hover={{
+                            cursor: "pointer",
+                            backgroundColor:
+                                colorMode === "light" ? "#efefef" : "#20242a"
+                        }}>
+
                         <Flex flexDirection="row" gap="0.6rem">
                             <Avatar cursor="pointer" />
                         </Flex>
@@ -93,13 +110,20 @@ export const LeftSidebar = () => {
                                 Varun
                             </Heading>
 
-                            <Heading as="h5" size="xs" color="gray.300">
+                            <Heading as="h5" size="xs" color="gray.600">
                                 I am so dumb help me and eat shit lol
                             </Heading>
                         </Flex>
                     </Flex>
 
-                    <Flex gap="0.4rem">
+                    <Flex
+                        gap="0.4rem"
+                        _hover={{
+                            cursor: "pointer",
+                            backgroundColor:
+                                colorMode === "light" ? "#efefef" : "#20242a"
+                        }}
+                    >
                         <Flex flexDirection="row" gap="0.6rem">
                             <Avatar cursor="pointer" />
                         </Flex>
@@ -109,7 +133,7 @@ export const LeftSidebar = () => {
                                 Varun
                             </Heading>
 
-                            <Heading as="h5" size="xs" color="gray.300">
+                            <Heading as="h5" size="xs" color="gray.600">
                                 I am so dumb help me and eat shit lol
                             </Heading>
                         </Flex>
