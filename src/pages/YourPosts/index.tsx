@@ -7,11 +7,10 @@ import { Feed } from "../../components/Feed"
 import { LeftSidebar } from "../../components/LeftSidebar"
 
 
-export const Explore = () => {
+export const YourPosts = () => {
     useEffect(() => {
-        document.title = "Haruka - Explore"
+        document.title = "Haruka - YourPosts"
     }, [])
-
 
     return (
         <>
@@ -23,13 +22,11 @@ export const Explore = () => {
                 marginRight="1rem"
             >
                 <RightSidebar />
-
                 <Feed
-                    isExplore={true}
+                    isExplore={false}
                     isLibrary={false}
-                    isYourPosts={false}
+                    isYourPosts={true}
                 />
-
                 <LeftSidebar />
             </Grid>
         </>

@@ -23,7 +23,11 @@ export const Library = () => {
                 marginRight="1rem"
             >
                 <RightSidebar />
-                <Feed isExplore={false} isLibrary={true} />
+                <Feed
+                    isExplore={false}
+                    isLibrary={true}
+                    isYourPosts={false}
+                />
                 <LeftSidebar />
             </Grid>
         </>
