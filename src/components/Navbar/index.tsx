@@ -6,12 +6,7 @@ import {
     MenuButton,
     MenuList,
     MenuItem,
-    useMediaQuery
-} from "@chakra-ui/react"
-import { FaUserCircle } from "react-icons/fa"
-import { AiFillStar } from "react-icons/ai"
-import { IoLogOut } from "react-icons/io5"
-import {
+    useMediaQuery,
     Avatar,
     Button,
     Flex,
@@ -23,14 +18,28 @@ import {
     useColorMode,
     IconButton,
     AvatarBadge,
+    Popover,
+    PopoverTrigger,
+    PopoverContent,
+    PopoverHeader,
+    PopoverBody,
+    PopoverFooter,
+    PopoverArrow,
+    PopoverCloseButton,
+    PopoverAnchor
 } from "@chakra-ui/react"
+
+import { FaUserCircle } from "react-icons/fa"
+import { AiFillStar } from "react-icons/ai"
+import { IoLogOut } from "react-icons/io5"
 import { ImSearch } from "react-icons/im"
-import { FaSun, FaMoon, FaUser } from "react-icons/fa"
+import { FaSun, FaMoon, FaUser, FaBell } from "react-icons/fa"
 import { IoMdCreate } from "react-icons/io"
 
- const Navbar = () => {
+
+const Navbar = () => {
     const { colorMode, toggleColorMode } = useColorMode()
-    const [ isMobile ] = useMediaQuery("(max-width: 768px)")
+    const [isMobile] = useMediaQuery("(max-width: 768px)")
 
     const navigate = useNavigate()
 
@@ -76,7 +85,7 @@ import { IoMdCreate } from "react-icons/io"
                             placeholder="Search shit ..."
                             variant="filled"
                             onChange={(e: React.ChangeEvent<HTMLInputElement>) => {
-                                setSearch(e.target.value);
+                                setSearch(e.target.value)
                             }}
                             value={search}
                         />
@@ -105,6 +114,30 @@ import { IoMdCreate } from "react-icons/io"
                     />
                 </Tooltip>
             )}
+
+            <Popover>
+                <PopoverTrigger>
+                    <IconButton
+                        icon={<FaBell />}
+                        aria-label="Notification"
+                    />
+                </PopoverTrigger>
+
+                <PopoverContent>
+                    <PopoverArrow />
+                    <PopoverCloseButton />
+
+                    <PopoverHeader>
+                        Notifications!
+                    </PopoverHeader>
+
+                    <PopoverBody>
+                        You have no new notifications seems like no one love you.Star this
+                        project on github and everyone will start loving you.
+                    </PopoverBody>
+
+                </PopoverContent>
+            </Popover>
 
             <Tooltip label="Create shit" openDelay={400}>
                 <Button
@@ -145,7 +178,12 @@ import { IoMdCreate } from "react-icons/io"
                         Star on Github
                     </MenuItem>
 
-                    <MenuItem gap="0.7rem">
+                    <MenuItem
+                        gap="0.7rem"
+                        onClick={() => {
+                            navigate("/login")
+                        }}
+                    >
                         <IoLogOut size="1.4rem" />
                         Logout
                     </MenuItem>
