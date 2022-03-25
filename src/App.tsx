@@ -6,6 +6,7 @@ import { Library } from "./pages/Library"
 import { YourPosts } from "./pages/YourPosts"
 import { Search } from "./pages/Search"
 import { Profile } from "./pages/Profile"
+import { Followers } from "./pages/Followers"
 
 const App = () => {
   return (
@@ -17,7 +18,8 @@ const App = () => {
         <Route path="/library" element={<Library />} />
         <Route path="/your_posts" element={<YourPosts />} />
         <Route path="/search" element={<Search />} />
-        <Route path="/profile" element={<Profile/>} />
+        <Route path="/profile" element={<Profile />} />
+        <Route path="/followers" element={<Followers />} />
       </Routes>
     </Router>
   )

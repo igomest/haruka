@@ -29,6 +29,7 @@ export const Home = () => {
                     isYourPosts={false}
                     isSearch={false}
                     isProfile={false}
+                    isFollower={false}
                 />
                 <LeftSidebar />
             </Grid>

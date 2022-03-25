@@ -1,8 +1,8 @@
-import { Avatar, Divider, Flex, Heading, Tag } from "@chakra-ui/react"
+import { Avatar, Divider, Flex, Heading, Tag, Tooltip } from "@chakra-ui/react"
 import { FeedProps } from "../../interfaces/propsTypes"
 import { Post } from "../Post"
 
-export const Feed = ({ isExplore, isLibrary, isYourPosts, isSearch, isProfile }: FeedProps) => {
+export const Feed = ({ isExplore, isLibrary, isYourPosts, isSearch, isProfile, isFollower }: FeedProps) => {
     return isExplore ? (
         <Flex
             flexDirection="column"
@@ -20,7 +20,7 @@ export const Feed = ({ isExplore, isLibrary, isYourPosts, isSearch, isProfile }:
             <Post />
             <Post />
         </Flex>
-        
+
     ) : isLibrary ? (
         <Flex
             flexDirection="column"
@@ -101,6 +101,74 @@ export const Feed = ({ isExplore, isLibrary, isYourPosts, isSearch, isProfile }:
             <Post />
         </Flex>
 
+    ) : isFollower ? (
+        <Flex
+            flexDirection="column"
+            gap="1rem"
+            width="100%"
+            position="sticky"
+            top="5.4rem"
+            height="max-content"
+        >
+            <Flex gap="2rem" alignItems="center" flexWrap="wrap" marginBottom="1rem">
+                <Tooltip label="Your mom" openDelay={400}>
+                    <Avatar
+                        width="16"
+                        height="16"
+                        cursor="pointer"
+                    />
+                </Tooltip>
+
+                <Tooltip label="Your uncle" openDelay={400}>
+                    <Avatar
+                        width="16"
+                        height="16"
+                        cursor="pointer"
+                    />
+                </Tooltip>
+
+                <Tooltip label="Your dad" openDelay={400}>
+                    <Avatar
+                        width="16"
+                        height="16"
+                        cursor="pointer"
+                    />
+                </Tooltip>
+
+                <Tooltip label="Branu" openDelay={400}>
+                    <Avatar
+                        width="16"
+                        height="16"
+                        cursor="pointer"
+                    />
+                </Tooltip>
+
+                <Tooltip label="Tim" openDelay={400}>
+                    <Avatar
+                        width="16"
+                        height="16"
+                        cursor="pointer"
+                    />
+                </Tooltip>
+
+                <Tooltip label="Tim mom" openDelay={400}>
+                    <Avatar
+                        width="16"
+                        height="16"
+                        cursor="pointer"
+                    />
+                </Tooltip>
+            </Flex>
+
+            <Heading as="h4" size="md">
+                Your followers post
+            </Heading>
+
+            <Post />
+            <Post />
+            <Post />
+            <Post />
+        </Flex>
     ) : (
         <Flex
             flexDirection="column"

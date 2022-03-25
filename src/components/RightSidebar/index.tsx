@@ -276,7 +276,7 @@ export const RightSidebar = () => {
                         />
 
                         <Heading as="h5" size="md">
-                            Library
+                            Followers
                         </Heading>
                     </Flex>
                 ) : (

@@ -29,6 +29,7 @@ export const Search = () => {
                     isYourPosts={false}
                     isSearch={true}
                     isProfile={false}
+                    isFollower={false}
                 />
                 <LeftSidebar />
             </Grid>
