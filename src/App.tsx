@@ -7,7 +7,7 @@ const App = () => {
   const Home = lazy(() => import("./pages/Home"))
   const Login = lazy(() => import("./pages/Login"))
   const Explore = lazy(() => import("./pages/Explore"))
-  const Library = lazy(() => import("./pages/Library"));
+  const Library = lazy(() => import("./pages/Library"))
   const YourPosts = lazy(() => import("./pages/YourPosts"))
   const Search = lazy(() => import("./pages/Search"))
   const Followers = lazy(() => import("./pages/Followers"))
