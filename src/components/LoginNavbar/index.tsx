@@ -17,7 +17,7 @@ import { FaSun, FaMoon, FaUser } from "react-icons/fa"
 import { AiOutlineFire } from "react-icons/ai"
 
 
-export const LoginNavbar = () => {
+const LoginNavbar = () => {
     useEffect(() => {
         document.title = "OnlyUwU - Login"
     }, []);
@@ -90,3 +90,5 @@ export const LoginNavbar = () => {
         </Flex>
     )
 }
+
+export default LoginNavbar

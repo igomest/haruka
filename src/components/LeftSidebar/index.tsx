@@ -8,7 +8,7 @@ import {
 } from "@chakra-ui/react"
 
 
-export const LeftSidebar = () => {
+ const LeftSidebar = () => {
     const { colorMode } = useColorMode()
 
 
@@ -143,3 +143,5 @@ export const LeftSidebar = () => {
         </Flex>
     )
 }
+
+export default LeftSidebar

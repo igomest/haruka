@@ -1,13 +1,13 @@
 import { useEffect } from "react"
 
 import { Grid } from "@chakra-ui/react"
-import { Navbar } from "../../components/Navbar"
-import { RightSidebar } from "../../components/RightSidebar"
-import { Feed } from "../../components/Feed"
-import { LeftSidebar } from "../../components/LeftSidebar"
+import Navbar from "../../components/Navbar"
+import RightSidebar from "../../components/RightSidebar"
+import Feed from "../../components/Feed"
+import LeftSidebar from "../../components/LeftSidebar"
 
 
-export const Search = () => {
+const Search = () => {
     useEffect(() => {
         document.title = "Haruka - Search results"
     }, [])
@@ -36,3 +36,5 @@ export const Search = () => {
         </>
     )
 }
+
+export default Search

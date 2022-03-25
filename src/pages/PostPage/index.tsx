@@ -1,13 +1,13 @@
 import { useEffect } from "react"
 
 import { Grid } from "@chakra-ui/react"
-import { Navbar } from "../../components/Navbar"
-import { RightSidebar } from "../../components/RightSidebar"
-import { LeftSidebar } from "../../components/LeftSidebar"
-import { CreatePost } from "../../components/CreatePost"
+import Navbar from "../../components/Navbar"
+import RightSidebar from "../../components/RightSidebar"
+import LeftSidebar from "../../components/LeftSidebar"
+import CreatePost from "../../components/CreatePost"
 
 
-export const PostPage = () => {
+const PostPage = () => {
     useEffect(() => {
         document.title = "Haruka - Create post"
     }, [])
@@ -22,8 +22,8 @@ export const PostPage = () => {
                 marginLeft="1rem"
                 marginRight="1rem"
             >
-                
-       
+
+
                 <RightSidebar />
                 <CreatePost />
                 <LeftSidebar />
@@ -31,3 +31,5 @@ export const PostPage = () => {
         </>
     )
 }
+
+export default PostPage

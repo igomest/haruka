@@ -11,7 +11,7 @@ import {
 import { MdShare } from "react-icons/md"
 
 
-export const ProfileSidebar = () => {
+ const ProfileSidebar = () => {
     return (
         <Flex
             width="100%"
@@ -95,3 +95,5 @@ export const ProfileSidebar = () => {
         </Flex>
     )
 }
+
+export default ProfileSidebar

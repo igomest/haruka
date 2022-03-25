@@ -16,7 +16,7 @@ import { RiUserFollowFill } from "react-icons/ri"
 import catboi from "../../assets/catboi.jpeg"
 
 
-export const RightSidebar = () => {
+ const RightSidebar = () => {
     const { colorMode } = useColorMode()
 
     const navigate = useNavigate()
@@ -325,3 +325,5 @@ export const RightSidebar = () => {
         </Flex>
     )
 }
+
+export default RightSidebar

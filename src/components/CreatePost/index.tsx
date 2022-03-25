@@ -2,7 +2,7 @@ import { Flex, Heading, Image, Input, Button } from "@chakra-ui/react"
 import { BsImageFill } from "react-icons/bs"
 
 
-export const CreatePost = () => {
+const CreatePost = () => {
     return (
         <Flex flexDirection="column" gap="2rem" width="100%" height="max-content">
             <Heading as="h4" size="md">
@@ -48,3 +48,5 @@ export const CreatePost = () => {
         </Flex>
     )
 }
+
+export default CreatePost

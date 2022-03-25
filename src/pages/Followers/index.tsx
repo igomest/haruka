@@ -1,12 +1,12 @@
 import { useEffect } from "react"
 
 import { Grid } from "@chakra-ui/react"
-import { Navbar } from "../../components/Navbar"
-import { RightSidebar } from "../../components/RightSidebar"
-import { Feed } from "../../components/Feed"
-import { LeftSidebar } from "../../components/LeftSidebar"
+import  Navbar  from "../../components/Navbar"
+import  RightSidebar  from "../../components/RightSidebar"
+import  Feed  from "../../components/Feed"
+import  LeftSidebar  from "../../components/LeftSidebar"
 
-export const Followers = () => {
+const Followers = () => {
     useEffect(() => {
         document.title = "Haruka - Followers"
     }, [])
@@ -35,3 +35,5 @@ export const Followers = () => {
         </>
     )
 }
+
+export default Followers

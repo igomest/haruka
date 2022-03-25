@@ -4,7 +4,7 @@ import { BsHeart, BsBookmark, BsBook } from "react-icons/bs"
 import { MdOutlineReportProblem } from "react-icons/md"
 import catboiImg from "../../assets/catboi.jpeg"
 
-export const Post = () => {
+ const Post = () => {
     return (
         <Flex
             flexDirection="column"
@@ -100,3 +100,5 @@ export const Post = () => {
         </Flex>
     )
 }
+
+export default Post

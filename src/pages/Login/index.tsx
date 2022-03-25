@@ -1,8 +1,8 @@
-import { LoginNavbar } from "../../components/LoginNavbar"
-import { Button, Flex, Heading, Image, Tooltip } from "@chakra-ui/react";
-import { AiOutlineFire } from "react-icons/ai";
+import LoginNavbar from "../../components/LoginNavbar"
+import { Button, Flex, Heading, Image, Tooltip } from "@chakra-ui/react"
+import { AiOutlineFire } from "react-icons/ai"
 
-export const Login = () => {
+const Login = () => {
   return (
     <Flex overflow="hidden" flexDirection="column" height="100vh" width="100vw">
       <LoginNavbar />
@@ -41,3 +41,5 @@ export const Login = () => {
     </Flex>
   )
 }
+
+export default Login

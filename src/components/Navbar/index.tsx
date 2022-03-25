@@ -28,7 +28,7 @@ import { ImSearch } from "react-icons/im"
 import { FaSun, FaMoon, FaUser } from "react-icons/fa"
 import { IoMdCreate } from "react-icons/io"
 
-export const Navbar = () => {
+ const Navbar = () => {
     const { colorMode, toggleColorMode } = useColorMode()
     const [ isMobile ] = useMediaQuery("(max-width: 768px)")
 
@@ -154,3 +154,5 @@ export const Navbar = () => {
         </Flex>
     )
 }
+
+export default Navbar

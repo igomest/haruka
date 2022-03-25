@@ -1,8 +1,8 @@
 import { Avatar, Divider, Flex, Heading, Tag, Tooltip } from "@chakra-ui/react"
 import { FeedProps } from "../../interfaces/propsTypes"
-import { Post } from "../Post"
+import Post from "../Post"
 
-export const Feed = ({ isExplore, isLibrary, isYourPosts, isSearch, isProfile, isFollower }: FeedProps) => {
+const Feed = ({ isExplore, isLibrary, isYourPosts, isSearch, isProfile, isFollower }: FeedProps) => {
     return isExplore ? (
         <Flex
             flexDirection="column"
@@ -202,3 +202,5 @@ export const Feed = ({ isExplore, isLibrary, isYourPosts, isSearch, isProfile, i
     )
 
 }
+
+export default Feed

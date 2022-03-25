@@ -1,13 +1,13 @@
 import { useEffect } from "react"
 
 import { Grid } from "@chakra-ui/react"
-import { Navbar } from "../../components/Navbar"
-import { RightSidebar } from "../../components/RightSidebar"
-import { Feed } from "../../components/Feed"
-import { ProfileSidebar } from "../../components/ProfileSidebar"
+import Navbar from "../../components/Navbar"
+import RightSidebar from "../../components/RightSidebar"
+import Feed from "../../components/Feed"
+import ProfileSidebar from "../../components/ProfileSidebar"
 
 
-export const Profile = () => {
+const Profile = () => {
     useEffect(() => {
         document.title = "Haruka - Idiot"
     }, [])
@@ -36,3 +36,5 @@ export const Profile = () => {
         </>
     )
 }
+
+export default Profile

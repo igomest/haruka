@@ -1,14 +1,14 @@
 import { useEffect } from "react"
 
 import { Grid } from "@chakra-ui/react"
-import { Navbar } from "../../components/Navbar"
-import { RightSidebar } from "../../components/RightSidebar"
-import { Feed } from "../../components/Feed"
-import { LeftSidebar } from "../../components/LeftSidebar"
+import Navbar from "../../components/Navbar"
+import RightSidebar from "../../components/RightSidebar"
+import Feed from "../../components/Feed"
+import LeftSidebar from "../../components/LeftSidebar"
 
 
 
-export const Library = () => {
+const Library = () => {
     useEffect(() => {
         document.title = "Haruka - Library"
     }, [])
@@ -36,3 +36,5 @@ export const Library = () => {
         </>
     )
 }
+
+export default Library
