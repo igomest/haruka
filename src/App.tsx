@@ -7,6 +7,7 @@ import { YourPosts } from "./pages/YourPosts"
 import { Search } from "./pages/Search"
 import { Profile } from "./pages/Profile"
 import { Followers } from "./pages/Followers"
+import { PostPage } from "./pages/PostPage"
 
 const App = () => {
   return (
@@ -20,6 +21,7 @@ const App = () => {
         <Route path="/search" element={<Search />} />
         <Route path="/profile" element={<Profile />} />
         <Route path="/followers" element={<Followers />} />
+        <Route path="/create" element={<PostPage />} />
       </Routes>
     </Router>
   )
